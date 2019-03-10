@@ -20,7 +20,7 @@ public class AccountService {
         this.accountRepository = accountRepository;
     }
 
-    public Account crateAccount(BigDecimal balance) {
+    public Account createAccount(BigDecimal balance) {
         if (balance.compareTo(BigDecimal.ZERO) < 0) {
             throw new AccountBalanceIncorrectValue();
         }

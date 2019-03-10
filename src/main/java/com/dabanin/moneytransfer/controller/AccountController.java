@@ -26,7 +26,7 @@ public class AccountController {
                 throw new InvalidRequestException("Не указан баланс аккаунта");
             }
             BigDecimal accountStartBalance = new BigDecimal(balanceFromJson);
-            Account account = accountService.crateAccount(accountStartBalance);
+            Account account = accountService.createAccount(accountStartBalance);
             JsonObject responseBody = new JsonObject();
             responseBody.put("number", account.getNumber());
             responseBody.put("balance", account.getBalance().doubleValue());
